@@ -13,7 +13,6 @@
 axios
     .get("https://lambda-times-backend.herokuapp.com/topics") //get data
     .then(response => {
-        console.log(response);
         response.data.topics.forEach(element => { //loop data for seperate topics
             const tpc = tbldr(element);
             tbloc.appendChild(tpc); //append to parent location
